@@ -5,7 +5,7 @@
 
 ### How to contribute on here :+1:
 * First of all fork this repositories to your account
-* Select any topic from the provided folders(or you can create your own folder by adding "/" at the last of your folder name)
+* Select any topic from the provided folders(or to create your folder add "/" at the last of your folder name)
 * Now, Select create file and give your file a name and write some code in the text area
 * important, don't forget to add some description to your file
 * when you think all thing is done, hit on the pull request button to create pull request
@@ -18,4 +18,4 @@
 * [click here](https://www.youtube.com/watch?v=OVQK2zzb6U8) to see how to make pull request
 
 #### I am damn excited to see you contributing :heart:
-##### Keep Contributing, Keep Husting :smiley:
+##### Keep Contributing, Keep Hustling :smiley:
