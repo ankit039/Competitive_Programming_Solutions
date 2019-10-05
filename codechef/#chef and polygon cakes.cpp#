@@ -1,0 +1,43 @@
+/*username-murtaza1112
+https://www.codechef.com/problems/PCJ18C 
+ 
+All submissions for this problem are available.Chef is making polygon cakes in his kitchen today!
+
+Since the judge panel is very strict, Chef's cakes must be beautiful and have sharp and precise internal angles in arithmetic progression.
+
+Given the number of sides, N, of the cake Chef is baking today and also the measure of its first angle(smallest angle), A, find the measure of the Kth angle.*/
+
+#include <iostream>
+
+using namespace std;
+int hcf(int num,int den);
+int main() {
+	// your code goes here
+	int test;
+	cin>>test;
+	while(test!=0)
+	{   
+	    int n,sum,k;long long int a;
+	    cin>>n;cin>>a;cin>>k;
+	    sum=180*(n-2);
+	    int den=n*(n-1);
+	    int num=(a*den)+((k-1)*(2*sum-2*a*n));
+	    int result=hcf(num,den);
+	    
+	    cout<<num/result<<" "<<den/result<<endl;
+	    test--;
+	}
+	return 0;
+}
+
+int hcf(int num,int den)
+{  int max;
+    (num>den)?max=den:max=num;
+     int hcf;
+    for(int i=1;i<=max;i++)
+    {
+        if(den%i==0 && num%i==0)
+        hcf=i;
+    }
+    return hcf;
+}
