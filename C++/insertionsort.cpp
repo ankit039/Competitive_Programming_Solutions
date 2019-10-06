@@ -1,26 +1,40 @@
-#include <bits/stdc++.h> 
-using namespace std; 
+#include <stdio.h>
 
-template<typename T>
-void insertionsort(vector<T> &array){
-  int n = array.size();
+void insertionSort (int array[], int array_size) {
+    int i, j, k;
 
-	for(int i = 1; i < n; i++){
-		for(int j = i; j > 0 and array[j-1] > array[j]; j--){
-			swap(array[j-1], array[j]);
-		}
-	}
+    for (i = 1; i < array_size; i++) {
+        k = array[i];
+        j = i - 1;
+
+        while ((j >= 0) && (array[j] > k)) {
+            array[j + 1] = array[j];
+            j--;
+        }
+        array[j + 1] = k;
+    }
+
 }
 
-int main() 
-{ 
-  srand((unsigned int)time(NULL));
-  vector<int> arr;
-  for(int i = 0; i < 10; i++) arr.emplace_back(rand()%1000);
-  insertionsort(arr);
-  for(int i = 0; i < arr.size(); i++){
-    cout << arr[i] << " ";
-  }
-  cout << endl;
-	return 0; 
-} 
+
+int main (void) {
+
+    int i;
+    int array[10] = {3, 6, 1, 7, 2, 0, 4, 5, 9, 8};
+
+    printf("       array: ");
+    for (i = 0; i < sizeof(array) / sizeof(array[0]); i++) {
+        cout << array[i] << ' ';
+    }
+    cout << endl;
+
+    insertionSort(array, sizeof(array) / sizeof(array[0]));
+
+    printf("sorted array: ");
+    for (i = 0; i < sizeof(array) / sizeof(array[0]); i++) {
+ 	cout << array[i] << ' ';
+    }
+    cout << endl;
+
+    return 0;
+}

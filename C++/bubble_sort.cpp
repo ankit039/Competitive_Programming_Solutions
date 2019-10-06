@@ -10,19 +10,19 @@ int main()
 	int a[n];
 	cout<<"Enter the array elements: "; 
 	
-	for(i=0;i<n;++i)
+	for(i=0;i<n;i++)
 		cin>>a[i];
 		
-	for(i=1;i<n;++i)
+	for(i=0;i<n-1;++i)
 	{
-		for(j=0;j<(n-i);++j)
+		for(j=n-1;j>i;j--)
 		{
-			if(a[j]>a[j+1])
+			if(a[j]<a[j-1])
 			{
-				k=1;
-				temp=a[j];
-				a[j]=a[j+1];
-				a[j+1]=temp;
+				k=a[j];
+				a[j]=a[j-1];
+				a[j-1]=k;
+				
 			}
 		}
 		if(k==0)
