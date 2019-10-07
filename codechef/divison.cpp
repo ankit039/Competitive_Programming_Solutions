@@ -1,3 +1,7 @@
+/*
+username:lazyguy2000
+program link:https://www.codechef.com/ZCOPRAC/problems/ZCO14003/
+*/
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
@@ -18,26 +22,23 @@ int32_t main(){
     ios::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
-   ll t,n,c;
-   cin>>t;
-   while(t--)
-   {
+  ll n;
     cin>>n;
-    
-    if(n%2==0)
-        c=(n/2);
-    else 
-        c=(n/2)+1;
-    if(c==1)
-        cout<<"2"<<edl;
-    else{
-    c=c*2;
-    cout<<(c-n)<<edl;
-
+    ll bud[n];
+    for(int i=0;i<n;i++)
+    {
+        ll budget;
+        cin>>budget;
+        bud[i]=budget;
+    }
+    sort(bud,bud+n);
+    ll ans=0,res=0;
+    for(int i=n,j=0;i>0;i--,j++)
+    {
+        res=bud[j]*i;
+        if(res>ans)
+            ans=res;
+    }
+    cout<<ans<<endl;
+    return 0;
 }
-   }
-
-           
-
-
- }          
