@@ -28,6 +28,7 @@ class Solution {
         return true;
     }
     
+    // uses the concept of backtracking to try out all the possible solutions and then printing the valid solutions
     static void backtrack(int c, int n, int row[])
     {
         if (c > n-1)
