@@ -1,7 +1,7 @@
 import math
 
 def is_prime(number):
-  if ((number <= 1) or((number % 2) == 0)): return False
+  if ((number <= 1) or((number % 2) == 0) and number != 2): return False
   if number == 2: return True
   
 
