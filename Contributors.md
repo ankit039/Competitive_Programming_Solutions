@@ -6,3 +6,4 @@
 3. [Matheus Muriel](https://github.com/MatheusMuriel/)
 4. [Priyanshu Tiwari](https://github.com/tpriyanshu90)
 5. [Manas Bichoo](https://github.com/manasbichoo)
+6. [Vaishnavi Janardhan](https://github.com/vaishnavi-janardhan)
