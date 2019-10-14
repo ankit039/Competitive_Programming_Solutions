@@ -7,3 +7,4 @@
 4. [Priyanshu Tiwari](https://github.com/tpriyanshu90)
 5. [Manas Bichoo](https://github.com/manasbichoo)
 6. [Vaishnavi Janardhan](https://github.com/vaishnavi-janardhan)
+6. [Kunal Pitale](https://github.com/iamkunalpitale)
