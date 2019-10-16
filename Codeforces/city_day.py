@@ -37,6 +37,4 @@ if pos >= len(ent):
     print (pos)
 else:
     print (pos + 1)
-            
-
-
+    
