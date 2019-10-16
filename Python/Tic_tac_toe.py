@@ -1,3 +1,4 @@
+import random
 def tic_tac_toe():
     p=["1","2","3","4","5","6","7","8","9"]
     P1=None
@@ -20,7 +21,13 @@ def tic_tac_toe():
         p1='O'
     print("Player1:You chose %c\n"%p1)
     print("Player2:You chose %c\n"%p2)
-    print("Player1:You should start the game\n\n")
+    def tose():
+        choice=random.randint(0,1)
+        if choice==0:
+            print("Player1:You should start the game\n\n")
+         else:
+            print("Player2:You should start the game\n\n")
+    turn=tose()
     def player_1():
         while(1):
             print("Player1:Place the position of %c\n"%p1)
@@ -43,6 +50,10 @@ def tic_tac_toe():
             else:
                 print("Player1:You chose a wrong cell\n")
                 continue
+    if turn==0:
+        player_1()
+    else:
+        player_2()
     def game_win():
         c=0
         t=0
