@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+void power(int,int);
+int main()
+{
+    int x,y;
+    cout<<"Enter the value of x and y"<<endl;
+    cin>>x>>y;
+    power(x,y);
+    return 0;
+}
+void power(int a,int b)
+{
+    int i,pro=1;
+    for(i=1;i<=b;i++)
+        pro=a*pro;
+    cout<<"X raised to the power y: "<<pro<<endl;
+
+}
