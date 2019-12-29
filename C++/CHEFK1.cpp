@@ -1,68 +1,39 @@
 #include<bits/stdc++.h>
-#define ll long long
 using namespace std;
-
-int main ()
+unsigned long long int cal(unsigned long long int x)
 {
-    ios::sync_with_stdio(false);
-    ll t;
+    x= (x*(x+1))/2;
+    return x;
+}
+int main()
+{
+    int  t;
     cin>>t;
-    while(t--){
-        ll n,m;
-        cin>>n>>m;
-        if(n==1){
-            if(m==0||m==1)
-                cout<<m<<endl;
-            else
-                cout<<-1<<endl;
-        }
-        else if(n==2){
-            if(m>=n-1&&m<=3){
-                if(m>=n)
-                    cout<<2<<endl;
-                else
-                    cout<<1<<endl;
-            }
-            else
-                cout<<-1<<endl;
-        }
-        else{
-            ll y=n*(n+1)/2;
-            if(m>=n-1&&m<=y){
-                if(m>=n-1&&m<=n+1)
-                    cout<<2<<endl;
-                else{
-                    ll x=n+2;
-                    if(m>=x&&m<=2*n)
-                        cout<<3<<endl;
-                    else{
-                        x=2*n+1;
-                        ll cnt=3,z=-1;
-                        while(m>=x&&m<=y){
-                            cnt++;
-                            if(n%2==1){
-                                if(z==-1){
-                                    x+=n/2;
-                                    z=1;
-                                }
-                                else{
-                                    x+=n/2+1;
-                                    z=-1;
-                                }
-                            }
-                            else{
-                                x+=n/2;
-                            }
-                            if(cnt==n)
-                                break;
-                        }
-                        cout<<cnt<<endl;
-                    }
-                }
-            }
-            else
-                cout<<-1<<endl;
-        }
+    while(t--)
+    {
+       int n,k;
+       cin>>n>>k;
+       int a[n];
+       for(int x=0;x<n;x++)
+       cin>>a[x];
+       unsigned long long int sum=0;
+       for(int x=0;x<n;x++)
+       {
+           for(int y=0;y<n;y++)
+           {
+               if(y!=x)
+               {
+                   if(y<x)
+                   {
+                           if(a[y]<a[x])sum+=cal(k-1);
+                   }
+                   else
+                   {if(a[y]<a[x])sum+=cal(k);
+                   }
+                   
+               }
+           }
+       }
+       cout<<sum<<endl;
     }
-    return 0;
 }
