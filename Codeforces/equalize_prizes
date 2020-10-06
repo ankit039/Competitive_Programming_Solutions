@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+ 
+int q;
+int n,k;
+int A[101];
+int minim;
+int ans;
+ 
+int main(){
+    cin >> q;
+ 
+    for(int p = 0; p < q; p++){
+        scanf("%d %d", &n, &k);
+        minim = 1000000000;
+ 
+        for(int i = 0; i < n; i++){
+            scanf("%d",&A[i]);
+            minim = min(minim,A[i]);
+        }
+ 
+        ans = k + minim;
+        for(int i = 0; i < n; i++){
+            if(abs(ans-A[i])>k){
+                ans = -1;
+                break;
+            }
+        }
+ 
+        cout << ans << endl;
+    }
+ 
+    return 0;
+}
