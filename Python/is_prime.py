@@ -6,7 +6,7 @@ def is_prime(number):
   
 
   for i in range(3, int(math.sqrt(number)) +1,2):
-    if number % 1 == 0: return False
+    if number % i == 0: return False
   return True
 
 number = input ("Enter number :")
