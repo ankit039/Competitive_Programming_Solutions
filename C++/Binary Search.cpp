@@ -1,36 +1,33 @@
-int binarySearch(int arr[], int l, int r, int x) 
-{ 
-    while (l <= r) { 
-        int m = l + (r - l) / 2; 
-  
-        // Check if x is present at mid 
-        if (arr[m] == x) 
-            return m; 
-  
-        // If x greater, ignore left half 
-        if (arr[m] < x) 
-            l = m + 1; 
-  
-        // If x is smaller, ignore right half 
+int binarySearch(int arr[],int size,int element){
+    int low,mid,high;
+    low = 0;
+    high = size-1;
+
+    while(low<=high){
+        mid = (low + high)/2;
+        if (arr[mid] == element)
+        {
+            cout<<"OK\n";
+            cout<<"The element "<<element<<" was foung on index: "<<mid<<endl;
+            return mid;
+        }
+        if (arr[mid]<element){
+            low = mid+1;
+        }
         else
-            r = m - 1; 
-    } 
-  
-    // if we reach here, then element was 
-    // not present 
-    return -1; 
-} 
-  
-int main(void) 
-{ 
-    int arr[] = { 2, 3, 4, 10, 40 }; 
-    int n = sizeof(arr) / sizeof(arr[0]); 
-    int x = 10; 
-    int result = binarySearch(arr, 0, n - 1, x); 
-    (result == -1) ? printf("Element is not present"
-                            " in array") 
-                   : printf("Element is present at "
-                            "index %d", 
-                            result); 
-    return 0; 
-} 
+        {
+            high = mid - 1;
+        }
+    }
+    cout<<mid<<endl;
+    return -1;
+}
+
+int main(){
+    int arr[] = {1,2,3,4,5,6,7,8,9,10};
+    int size = sizeof(arr)/sizeof(int);
+    int element = 9;
+    int searchIndex = binarySearch(arr,size,element);
+// cout<<"The element "<<element<<" was foung on index: "<<mid<<endl;
+return 0;
+}
