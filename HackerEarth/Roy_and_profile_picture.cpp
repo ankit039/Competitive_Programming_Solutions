@@ -1,25 +1,43 @@
 #include<iostream>
+//The reason why you don't see drastic changes is the code is same but you could've used {}braces to format which is a good practice and increases readability 
 using namespace std;
-int main()
-{
-    int L;
-    cin>>L;
-    int N;
-    cin>>N;
-    while(N--)
+
+int main(){
+    int i,j;
+    cout<<"i";
+    cin>>i;
+    cout<<"j";
+    cin>>j;
+    cout<<endl;
+    while (j--)
     {
-        int W,H;
-        cin>>W>>H;
-        if(W<L||H<L)
-        cout<<"UPLOAD ANOTHER"<<endl;
-        if(W>L&&H>L||W>L&&H==L||W==L&&H>L)
-       { if(W!=H)
-           cout<<"CROP IT"<<endl;
-        else
-        cout<<"ACCEPTED"<<endl;
-       }
-        if(W==L&&H==L)
-        cout<<"ACCEPTED"<<endl;
+        int a,b;
+        cout<<"a";
+        cin>>a;
+        cout<<"b";
+        cin>>b;
+        if (a<i||b<i)
+        {
+            cout<<"UPLOAD ANOTHER"<<endl;
+        }
+        if(a>i&&b>i||a>i&&b==i||a==i&&b>i){
+            if (a!=b)
+            {
+                cout<<"CROP IT"<<endl;
+            }else
+            {
+                cout<<"ACCEPTED"<<endl;
+            }
+        
+            
+        }
+        if (a==i&&b==i)
+        {
+            cout<<"ACCEPTED"<<endl;
+        }
+        
+        
     }
-    return 0;
+    
+return 0;
 }
